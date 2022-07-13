@@ -1,9 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from antagonistfinder import AntagonistFinder
+from not_solid_code.weapon import Laser, Kick
 
 
 class SuperHero(ABC):
-
     def __init__(self, name, can_use_ultimate_attack=True):
         self.name = name
         self.can_use_ultimate_attack = can_use_ultimate_attack
@@ -12,25 +12,9 @@ class SuperHero(ABC):
     def find(self, place):
         self.finder.get_antagonist(place)
 
-    @abstractmethod
-    def ultimate(self):
-        pass
-
-    def attack(self):
-        self.fire_a_gun()
-
-    def fire_a_gun(self):
-        print('PIU PIU')
-
-    def roundhouse_kick(self):
-        print('Bump')
-
-    def incinerate_with_lasers(self):
-        print('Wzzzuuuup!')
 
 
-class Superman(SuperHero):
-
+class Superman(SuperHero, Laser):
     def __init__(self):
         super(Superman, self).__init__('Clark Kent', True)
 
@@ -38,8 +22,7 @@ class Superman(SuperHero):
         self.incinerate_with_lasers()
 
 
-class ChackNorris(SuperHero):
-
+class ChackNorris(SuperHero, Kick):
     def __init__(self):
         super(ChackNorris, self).__init__('Chack Norris', True)
 

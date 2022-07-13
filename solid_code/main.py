@@ -1,9 +1,6 @@
 from heroes import Superman, SuperHero, ChackNorris
 from places import Place, Kostroma, Tokyo
-
-
-def create_news(hero, place):
-    print(f'{hero.name} saved the {place.city_name}!')
+from not_solid_code.massmedia import TV
 
 
 def save_the_place(hero: SuperHero, place: Place):
@@ -11,7 +8,7 @@ def save_the_place(hero: SuperHero, place: Place):
     hero.attack()
     if hero.can_use_ultimate_attack:
         hero.ultimate()
-    create_news(hero, place)
+    TV.create_news(hero, place)
 
 
 if __name__ == '__main__':
