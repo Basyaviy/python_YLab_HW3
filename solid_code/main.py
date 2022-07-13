@@ -1,6 +1,6 @@
 from heroes import Superman, SuperHero, ChackNorris
 from places import Place, Kostroma, Tokyo
-from not_solid_code.massmedia import TV
+from massmedia import TV
 
 
 def save_the_place(hero: SuperHero, place: Place):

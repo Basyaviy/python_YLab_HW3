@@ -1,6 +1,6 @@
 from abc import ABC
 from antagonistfinder import AntagonistFinder
-from not_solid_code.weapon import Laser, Kick
+from weapon import Laser, Kick
 
 
 class SuperHero(ABC):
